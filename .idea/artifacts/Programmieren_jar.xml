@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Programmieren:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Programmieren_jar</output-path>
+    <root id="archive" name="Programmieren.jar">
+      <element id="module-output" name="Programmieren" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../3.Semester/Propra/blockteil/propra_gruppe_6/Alignment/src/commons-cli-1.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar" path-in-jar="/" />
+      <element id="module-source" name="Programmieren" />
+    </root>
+  </artifact>
+</component>
