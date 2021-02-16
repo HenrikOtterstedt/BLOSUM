@@ -8,10 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="337a703b-6277-4213-b6db-c8efda39e354" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CharTupel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CharTupel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FirstTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MAIN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TableRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TableRow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programmieren/CharTupel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Programmieren/CharTupel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programmieren/FirstTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Programmieren/FirstTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programmieren/MAIN.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Programmieren/MAIN.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programmieren/TableRow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Programmieren/TableRow.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +50,7 @@
     <configuration name="MAIN" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MAIN" />
       <module name="Programmieren" />
-      <option name="PROGRAM_PARAMETERS" value="-t 60 -s AAAABBB,CCCACAB,BBCABAC,CCCACBC,AABABAB ACCA,ACBA,AAAC,CCBA,AABB,BAAC AAACCCBBAA,BAACCAAAAA,ABABCACCAC,CACCBAACAA" />
+      <option name="PROGRAM_PARAMETERS" value="-t 50 -s BBBBC,CAABC,CACBA,ABBAC CBBAAACCBB,CCBAABBBBB,BCBCAACABA,ACACABCABC" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -85,18 +85,30 @@
       <updated>1613126178562</updated>
       <workItem from="1613126182800" duration="9714000" />
       <workItem from="1613389038221" duration="8346000" />
-      <workItem from="1613497281354" duration="2606000" />
+      <workItem from="1613497281354" duration="2848000" />
     </task>
+    <task id="LOCAL-00001" summary="Added functionality for calculating multiple blocks at once and thereby doing an entire matrix at once">
+      <created>1613500044569</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1613500044569</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added functionality for calculating multiple blocks at once and thereby doing an entire matrix at once" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added functionality for calculating multiple blocks at once and thereby doing an entire matrix at once" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="2542" y="-564" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613498072559">
+    <state x="2542" y="-564" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613500143384">
       <screen x="1920" y="-654" width="1920" height="1080" />
     </state>
-    <state x="2542" y="-564" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689/1920.-654.1920.1080@1920.-654.1920.1080" timestamp="1613498072559" />
+    <state x="2542" y="-564" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689/1920.-654.1920.1080@1920.-654.1920.1080" timestamp="1613500143384" />
     <state x="2685" y="-397" key="#com.intellij.ide.util.MemberChooser" timestamp="1613499861914">
       <screen x="1920" y="-654" width="1920" height="1080" />
     </state>
@@ -109,26 +121,30 @@
       <screen x="1920" y="-654" width="1920" height="1080" />
     </state>
     <state x="2610" y="-359" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1280.689/1920.-654.1920.1080@1920.-654.1920.1080" timestamp="1613126252683" />
-    <state width="1877" height="492" key="GridCell.Tab.0.bottom" timestamp="1613499950690">
+    <state x="2429" y="-605" key="CommitChangelistDialog2" timestamp="1613500043848">
+      <screen x="1920" y="-654" width="1920" height="1080" />
+    </state>
+    <state x="2429" y="-605" key="CommitChangelistDialog2/0.0.1280.689/1920.-654.1920.1080@1920.-654.1920.1080" timestamp="1613500043848" />
+    <state width="1877" height="216" key="GridCell.Tab.0.bottom" timestamp="1613500145457">
       <screen x="1920" y="-654" width="1920" height="1080" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.bottom/0.0.1280.689/1920.-654.1920.1080@0.0.1280.689" timestamp="1613161139416" />
-    <state width="1877" height="492" key="GridCell.Tab.0.bottom/0.0.1280.689/1920.-654.1920.1080@1920.-654.1920.1080" timestamp="1613499950690" />
-    <state width="1877" height="492" key="GridCell.Tab.0.center" timestamp="1613499950690">
+    <state width="1877" height="216" key="GridCell.Tab.0.bottom/0.0.1280.689/1920.-654.1920.1080@1920.-654.1920.1080" timestamp="1613500145457" />
+    <state width="1877" height="216" key="GridCell.Tab.0.center" timestamp="1613500145457">
       <screen x="1920" y="-654" width="1920" height="1080" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.center/0.0.1280.689/1920.-654.1920.1080@0.0.1280.689" timestamp="1613161139416" />
-    <state width="1877" height="492" key="GridCell.Tab.0.center/0.0.1280.689/1920.-654.1920.1080@1920.-654.1920.1080" timestamp="1613499950690" />
-    <state width="1877" height="492" key="GridCell.Tab.0.left" timestamp="1613499950690">
+    <state width="1877" height="216" key="GridCell.Tab.0.center/0.0.1280.689/1920.-654.1920.1080@1920.-654.1920.1080" timestamp="1613500145457" />
+    <state width="1877" height="216" key="GridCell.Tab.0.left" timestamp="1613500145457">
       <screen x="1920" y="-654" width="1920" height="1080" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.left/0.0.1280.689/1920.-654.1920.1080@0.0.1280.689" timestamp="1613161139416" />
-    <state width="1877" height="492" key="GridCell.Tab.0.left/0.0.1280.689/1920.-654.1920.1080@1920.-654.1920.1080" timestamp="1613499950690" />
-    <state width="1877" height="492" key="GridCell.Tab.0.right" timestamp="1613499950690">
+    <state width="1877" height="216" key="GridCell.Tab.0.left/0.0.1280.689/1920.-654.1920.1080@1920.-654.1920.1080" timestamp="1613500145457" />
+    <state width="1877" height="216" key="GridCell.Tab.0.right" timestamp="1613500145457">
       <screen x="1920" y="-654" width="1920" height="1080" />
     </state>
     <state width="1237" height="179" key="GridCell.Tab.0.right/0.0.1280.689/1920.-654.1920.1080@0.0.1280.689" timestamp="1613161139416" />
-    <state width="1877" height="492" key="GridCell.Tab.0.right/0.0.1280.689/1920.-654.1920.1080@1920.-654.1920.1080" timestamp="1613499950690" />
+    <state width="1877" height="216" key="GridCell.Tab.0.right/0.0.1280.689/1920.-654.1920.1080@1920.-654.1920.1080" timestamp="1613500145457" />
     <state width="1877" height="401" key="GridCell.Tab.1.bottom" timestamp="1613499902664">
       <screen x="1920" y="-654" width="1920" height="1080" />
     </state>
@@ -149,20 +165,13 @@
       <screen x="1920" y="-654" width="1920" height="1080" />
     </state>
     <state x="2360" y="-539" key="SettingsEditor/0.0.1280.689/1920.-654.1920.1080@1920.-654.1920.1080" timestamp="1613411030149" />
+    <state x="2472" y="-399" key="Vcs.Push.Dialog.v2" timestamp="1613500046567">
+      <screen x="1920" y="-654" width="1920" height="1080" />
+    </state>
+    <state x="2472" y="-399" key="Vcs.Push.Dialog.v2/0.0.1280.689/1920.-654.1920.1080@1920.-654.1920.1080" timestamp="1613500046567" />
     <state x="2584" y="-225" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1613410208724">
       <screen x="1920" y="-654" width="1920" height="1080" />
     </state>
     <state x="2584" y="-225" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.689/1920.-654.1920.1080@1920.-654.1920.1080" timestamp="1613410208724" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/MAIN.java</url>
-          <line>77</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
