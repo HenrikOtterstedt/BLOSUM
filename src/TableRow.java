@@ -27,20 +27,18 @@ public class TableRow {
 
     public double getSum()
     {
-        return DoubleStream.of(values).sum();
+        if(chars.one==chars.two) {
+            return DoubleStream.of(values).sum()*2;
+        }
+        else{
+            return DoubleStream.of(values).sum();
+        }
     }
 
     public String SumString()
     {
         String output = chars.one + "|" + chars.two + "\t";
-        if(chars.one==chars.two)
-        {
-            output = output + new Fraction(getSum()*2);
-        }
-        else
-        {
-            output = output + new Fraction(getSum());
-        }
+        output = output + new Fraction(getSum());
         return output;
     }
 

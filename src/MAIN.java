@@ -9,12 +9,13 @@ public class MAIN {
     public static void main(String[] args) {
         Options options = new Options();
 
-        Option threshold = new Option("t","threshold",true,"Threshold for the clustering required for the BLOSUM Matrix. (For a BLOSUM-55 it is 55).");
+        Option threshold = new Option("t","threshold",true,"Threshold for the clustering required for the BLOSUM Matrix. (For a BLOSUM-55 it is 55).\n The parameter should be an Integer between 0 and 100.");
         threshold.setRequired(true);
         options.addOption(threshold);
 
-        Option sequences = new Option("s","sequences",true,"The Sequence Block for which the BLOSUM Matrix is to be calculated. The Sequences have to be entered in the following way: \n <Seq1>,<Seq2>,<Seq3> ...");
+        Option sequences = new Option("s","sequences",true,"Sequence Blocks for the BLOSUM Matrix. \nWithin a block the Sequences have to be formatted in the following way: \n <Block1.1>,<Block1.2>,<Block1.3> <Block2.1>,<Block2.2>...\n The Blocks have to be separated by <Space>.");
         sequences.setRequired(true);
+        sequences.setArgs(Option.UNLIMITED_VALUES);
         options.addOption(sequences);
 
         //add parser and help formatter
@@ -31,32 +32,52 @@ public class MAIN {
             System.exit(1);
         }
 
-        String[] seqs = cmd.getOptionValue("s").split(",");
-        System.out.println("Given Sequences:");
-        System.out.println(Arrays.toString(seqs) +"\n");
-        System.out.println("Given Threshold:");
-        System.out.println(cmd.getOptionValue("t")+"\n");
-        ArrayList<Sequenz> allSeqs = new ArrayList<>();
-        for(int i=0;i<seqs.length;i++)
+        //get the Sequences and calculate clusters and tables for them
+        String[] blocks = cmd.getOptionValues("s");
+
+        ArrayList<FirstTable> tables = new ArrayList<>();
+        int blockcounter = 1;
+        for(String block : blocks) {
+            String[] seqs = block.split(",");
+            System.out.println("[BLOCK "+blockcounter+"]:\tGiven Sequences:");
+            System.out.println(Arrays.toString(seqs) + "\n");
+            System.out.println("Given Threshold:");
+            System.out.println(cmd.getOptionValue("t") + "\n");
+            ArrayList<Sequenz> allSeqs = new ArrayList<>();
+            for (int i = 0; i < seqs.length; i++) {
+                allSeqs.add(new Sequenz(i, seqs[i]));
+            }
+
+            ArrayList<Cluster> cluster = cluster(Integer.parseInt(cmd.getOptionValue("t")), allSeqs);
+            System.out.println("[BLOCK "+blockcounter+"]:\tThe following clusters were found. The number is referring to the place in the input string.");
+            System.out.println(cluster + "\n");
+
+            if (cluster.size() > 1) {
+                FirstTable ft = computeFirstTable(allSeqs, cluster);
+                System.out.println("[BLOCK "+blockcounter+"]:\tThe position Table:");
+                System.out.println(ft.toString());
+                System.out.println("\n");
+                System.out.println("The sum-table for [BLOCK "+blockcounter+"]. Sums for rows with the same Character are doubled.");
+                System.out.println(ft.finalTable());
+                tables.add(ft);
+            } else {
+                System.out.println("[BLOCK "+blockcounter+"]:\tThere was only one cluster found, consisting of all Seqs.");
+                System.out.println("No BLOSUM Matrix can be computed.");
+            }
+            blockcounter++;
+            System.out.println("\n----------\n");
+        }
+        //make the final matrix
+        System.out.println("The final BLOSUM-"+cmd.getOptionValue("t")+" Matrix. Calculated by adding the results of all Blocks.");
+        for(CharTupel charTupel : tables.get(0).sums.keySet())
         {
-            allSeqs.add(new Sequenz(i,seqs[i]));
-        }
-
-        ArrayList<Cluster> cluster = cluster(Integer.parseInt(cmd.getOptionValue("t")),allSeqs);
-        System.out.println("The following clusters were found. The number is referring to the place in the input string.");
-        System.out.println(cluster+"\n");
-
-        if(cluster.size()>1) {
-            FirstTable ft = computeFirstTable(allSeqs, cluster);
-            System.out.println("The position Table:");
-            System.out.println(ft.toString());
-            System.out.println("\n");
-            System.out.println("The final Table with all the sums. Sums for rows with the same Character are doubled.");
-            System.out.println(ft.finalTable());
-        }
-        else{
-            System.out.println("There was only one cluster found, consisting of all Seqs.");
-            System.out.println("No BLOSUM Matrix can be computed.");
+            String output = charTupel.one +"|"+charTupel.two+"\t";
+            Fraction value = new Fraction(0);
+            for(FirstTable firstTable: tables)
+            {
+                value = value.add(firstTable.sums.get(charTupel));
+            }
+            System.out.println(output+value);
         }
     }
 
