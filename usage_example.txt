@@ -1,0 +1,59 @@
+java -jar BLOSUM.jar -s BBBBC,ABCBC,CAABC,AAABA BBBAAACCBB,CBBAABBBBB,BCBCAACABA,ACACANCABA -t 60
+
+
+
+---------------------------------------------------------------------------------------------------------
+[BLOCK 1]:	Given Sequences:
+[BBBBC, ABCBC, CAABC, AAABA]
+
+Given Threshold:
+60
+
+[BLOCK 1]:	The following clusters were found. The number is referring to the place in the input string.
+[Cluster{1, 2}, Cluster{3, 4}]
+
+[BLOCK 1]:	The position Table:
+[A|A	1 / 4	|	0	|	0	|	0	|	0	
+, A|B	1 / 4	|	1	|	1 / 2	|	0	|	0	
+, A|C	1 / 4	|	0	|	1 / 2	|	0	|	1 / 2	
+, B|B	0	|	0	|	0	|	1	|	0	
+, B|C	1 / 4	|	0	|	0	|	0	|	0	
+, C|C	0	|	0	|	0	|	0	|	1 / 2	
+]
+
+
+The sum-table for [BLOCK 1]. Sums for rows with the same Character are doubled.
+A|A	1 / 2
+A|B	7 / 4
+A|C	5 / 4
+B|B	2
+B|C	1 / 4
+C|C	1
+
+
+----------
+
+[BLOCK 2]:	Given Sequences:
+[BBBAAACCBB, CBBAABBBBB, BCBCAACABA, ACACANCABA]
+
+Given Threshold:
+60
+
+[BLOCK 2]:	The following clusters were found. The number is referring to the place in the input string.
+[Cluster{1, 2, 3, 4}]
+
+[BLOCK 2]:	There was only one cluster found, consisting of all Seqs.
+No BLOSUM Matrix can be computed.
+
+----------
+
+The final BLOSUM-60 Matrix. Calculated by adding the results of all Blocks.
+A|A	1 / 2
+B|B	2
+C|C	1
+A|B	7 / 4
+B|C	1 / 4
+A|C	5 / 4
+
+
+
