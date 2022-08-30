@@ -27,5 +27,7 @@ This includes:
 - the sum table derived from the positional table
 - the final substitution matrix derived from all input blocks
 
+*All Floats in the matrices are given as fractions for better understandability.*
+
 ## Examples Usage
 A usecase and output example can be found in `usage_example.txt`.
